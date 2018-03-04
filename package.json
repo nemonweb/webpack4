@@ -11,6 +11,7 @@
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-styled-components": "^1.5.1",
     "eslint": "^4.18.2",
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "^3.0.4",
@@ -20,6 +21,10 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.0",
     "webpack": "^4.1.0",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
@@ -29,13 +34,13 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "precommit": "lint-staged",
-    "lint": "eslint ."
+    "lint:js": "eslint ./src",
+    "lint:css": "stylelint ./src",
+    "prett": "prettier --write ./src"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
+    "*.js": ["eslint --fix", "git add"],
+    "*.{js,jsx}": ["stylelint", "git add"],
     "*.{css,less,scss,html,ts,tsx,graphql,gql,json,js,jsx,md}": [
       "prettier --write",
       "git add"
