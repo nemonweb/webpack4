@@ -1,10 +1,17 @@
 import React from "react";
 import { hot } from 'react-hot-loader'
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 18px;
+  text-align: center;
+  color: palevioletred;
+`;
 
 const App = () => {
   return (
     <div>
-      <p>React here 321!</p>
+      <Title>React here 321!</Title>
     </div>
   );
 };
