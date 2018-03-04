@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/nikitatikhomirov/.nvm/versions/node/v9.2.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run lint:js
+  /Users/nikitatikhomirov/.nvm/versions/node/v9.2.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run prett
 
 PATH: 
   /Users/nikitatikhomirov/.nvm/versions/node/v9.2.0/bin:/Users/nikitatikhomirov/.rbenv/shims:/usr/local/opt/mysql@5.6/bin:/Users/nikitatikhomirov/.cargo/bin:/Users/nikitatikhomirov/.rbenv/bin:/Users/nikitatikhomirov/.fzf/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/mysql@5.6/bin:/usr/local/opt/mysql@5.6/bin:/Users/nikitatikhomirov/.rbenv/shims:/Users/nikitatikhomirov/.rbenv/bin:/Users/nikitatikhomirov/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -52,17 +52,11 @@ npm manifest:
       "precommit": "lint-staged",
       "lint:js": "eslint ./src",
       "lint:css": "stylelint ./src",
-      "prett": "prettier --write ./src"
+      "prett": "prettier --write"
     },
     "lint-staged": {
-      "*.js": [
-        "eslint --fix",
-        "git add"
-      ],
-      "*.{js,jsx}": [
-        "stylelint",
-        "git add"
-      ],
+      "*.js": ["eslint --fix", "git add"],
+      "*.{js,jsx}": ["stylelint", "git add"],
       "*.{css,less,scss,html,ts,tsx,graphql,gql,json,js,jsx,md}": [
         "prettier --write",
         "git add"
@@ -8116,7 +8110,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c eslint ./src
+  Arguments: -c prettier --write
   Directory: /Users/nikitatikhomirov/work/js/webpack4
   Output:
   
