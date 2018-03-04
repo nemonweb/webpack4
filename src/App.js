@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { hot } from 'react-hot-loader'
+
 const App = () => {
   return (
     <div>
-      <p>React here!</p>
+      <p>React here 321!</p>
     </div>
   );
 };
-export default App;
-ReactDOM.render(<App />, document.getElementById("app"));
+export default hot(module)(App);
