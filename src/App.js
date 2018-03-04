@@ -9,10 +9,11 @@ const Title = styled.h1`
 `
 
 const App = () => {
-    return (
-        <div>
-            <Title>React here 321!</Title>
-        </div>
-    )
+  return (
+    <div>
+      <Title>React here 321!</Title>
+    </div>
+  )
 }
+
 export default hot(module)(App)
