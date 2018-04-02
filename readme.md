@@ -1,5 +1,7 @@
-webpack 4
-https://www.valentinog.com/blog/webpack-4-tutorial/
-
-babel 7
-https://medium.com/@jdolle/babel-7-beta-instructions-aed5cf17048b
+* webpack 4
+* webpack-serve
+* babel 7
+* react 16
+* react-hot-loader
+* styled-components
+* eslint, stylelint, prettier, lint-staged
